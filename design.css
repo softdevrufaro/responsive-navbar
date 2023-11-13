@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.navbar{
+    width:100%;
+    height: 100px;
+    background-color: blue;
+    color:white;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.navbar ul li a{
+    background-color: transparent;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+}
+.navbar ul li {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.navbar ul li:hover{
+    background-color:navy;
+}
+
+.burger-icon{
+    color:white;
+    background-color: rgb(37, 16, 177);
+    font-size:50px;
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    float:left;
+    position:fixed;
+    top:-200px;
+    left:0;
+    rotate:90deg;
+    padding: 10px 10px;
+    text-align: center;
+    transition:0.5s;
+}
+@media (max-width: 600px){
+    .navbar ul{
+        visibility: hidden;
+    }
+    .burger-icon{
+        visibility: visible;
+        top:0;
+    }
+}
+.burger-icon:hover{
+    cursor: pointer;
+    background-color: navy;
+}
+/*This here is another element or DOM element that i will use to retrieve information from for smaller devices */
+.navpagelist{
+    position:fixed;
+    top:-1000px;
+    visibility: hidden;
+    transition:0.5s;
+    height:100%;
+    width: 100%;
+    background-color: navy;
+    color:white;
+}
+.navpagelist ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.navpagelist ul li a{
+    background-color: transparent;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.navpagelist ul li {
+    display: flex;
+    padding: 10%;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.navpagelist ul li:hover{
+    background-color: blue;
+}
